@@ -1,0 +1,21 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+<h2>Спасибо за ваш отзыв!</h2>
+<ul>
+    <li><strong>Имя:</strong> {{ data.name }}</li>
+    <li><strong>Email:</strong> {{ data.email }}</li>
+    <li><strong>Оценка:</strong> {{ data.rating }}</li>
+    <li>
+        <strong>Понравилось:</strong>
+        <ul>
+            {% for item in data.likes %}
+            <li>{{ item }}</li>
+            {% empty %}
+            <li>Не указано</li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li><strong>Пожелания:</strong> {{ data.suggestion|default:"-" }}</li>
+    <li><strong>Подписка:</strong> {% if data.subscribe %}Да{% else %}Нет{% endif %}</li>
+</ul>
+{% endblock %}

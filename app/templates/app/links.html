@@ -1,0 +1,24 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Полезные ресурсы</h2>
+<p>Ниже представлены полезные ресурсы, связанные с тематикой АвтоВАЗ:</p>
+
+<div style="margin-top: 20px;">
+    <div class="resource-block">
+        <img src="{% static 'app/content/per.png' %}" alt="LADA" class="resource-image" />
+        <a href="https://www.lada.ru/" target="_blank" class="resource-link">Официальный сайт LADA</a>
+    </div>
+
+    <div class="resource-block">
+        <img src="{% static 'app/content/drom.png' %}" alt="Drom" class="resource-image" />
+        <a href="https://www.drom.ru/" target="_blank" class="resource-link">Автопортал Drom.ru</a>
+    </div>
+
+    <div class="resource-block">
+        <img src="{% static 'app/content/zap.png' %}" alt="Запчасти" class="resource-image" />
+        <a href="https://surgut.lada.ru/original-details?dealer=1240" target="_blank" class="resource-link">Оригинальные запчасти LADA</a>
+    </div>
+</div>
+{% endblock %}

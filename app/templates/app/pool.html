@@ -1,0 +1,60 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+<h2>Форма обратной связи</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="submit-btn" class="btn btn-primary">Отправить</button>
+</form>
+
+<style>
+    .rating-label {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .highlight-1 {
+        background-color: #f8d7da;
+    }
+    
+    .highlight-2 {
+        background-color: #fff3cd;
+    }
+    
+    .highlight-3 {
+        background-color: #d1ecf1;
+    }
+    
+    .highlight-4 {
+        background-color: #c3e6cb;
+    }
+    
+    .highlight-5 {
+        background-color: #d4edda;
+    }
+    
+</style>
+
+<script>
+    function updateRatingHighlight() {
+        const radios = document.querySelectorAll('input[name="rating"]');
+        radios.forEach(r => {
+            const label = r.parentElement;
+            label.classList.remove('highlight-1', 'highlight-2', 'highlight-3', 'highlight-4', 'highlight-5');
+            if (r.checked) {
+                label.classList.add('highlight-' + r.value);
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const radios = document.querySelectorAll('input[name="rating"]');
+        radios.forEach(r => {
+            r.addEventListener('change', updateRatingHighlight);
+            if (r.checked) updateRatingHighlight();
+        });
+    });
+</script>
+{% endblock %}

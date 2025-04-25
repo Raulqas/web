@@ -1,0 +1,66 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Карусель -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000"
+     style="width: 600px; margin: 0 auto;">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="{% static 'app/content/ch.jpg' %}" class="img-responsive" alt="Слайд 1" style="height: 410px; object-fit: cover; display: block; margin: 0 auto;">
+            <div class="carousel-caption">
+                <p>Надёжность и качество LADA</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'app/content/dw.jpg' %}" class="img-responsive" alt="Слайд 2" style="height: 410px; object-fit: cover; display: block; margin: 0 auto;">
+            <div class="carousel-caption">
+                <p>Современные технологии на производстве</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'app/content/od.jpg' %}" class="img-responsive" alt="Слайд 3" style="height: 410px; object-fit: cover; display: block; margin: 0 auto;">
+            <div class="carousel-caption">
+                <p>Новые горизонты для LADA по всему миру</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{% static 'app/content/tr.jpg' %}" class="img-responsive" alt="Слайд 4" style="height: 410px; object-fit: cover; display: block; margin: 0 auto;">
+            <div class="carousel-caption">
+                <p>Гордость российского автопрома</p>
+            </div>
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Предыдущий</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Следующий</span>
+    </a>
+</div>
+
+<h2>Добро пожаловать на сайт, посвящённый АвтоВАЗ</h2>
+
+<p><strong>АвтоВАЗ</strong> — крупнейший производитель автомобилей в России, выпускающий машины под знаменитым брендом <strong>LADA</strong>. Компания была основана в 1966 году и с тех пор играет ключевую роль в отечественном автопроме.</p>
+
+<h3>Интересные факты:</h3>
+<ul>
+    <li>Первой моделью, выпущенной АвтоВАЗом, была легендарная <strong>ВАЗ-2101 «Копейка»</strong>.</li>
+    <li>Современные модели LADA активно разрабатываются при участии международных инженеров и соответствуют мировым стандартам.</li>
+    <li>АвтоВАЗ располагается в городе <strong>Тольятти</strong>, на берегу Волги.</li>
+    <li>Бренд LADA экспортируется в десятки стран мира, включая Европу, Южную Америку и Ближний Восток.</li>
+</ul>
+
+<h3>Цель сайта:</h3>
+<p>Предоставить краткую справку об истории и текущем положении компании АвтоВАЗ, а также полезные ресурсы для автолюбителей и специалистов отрасли.</p>
+{% endblock %}

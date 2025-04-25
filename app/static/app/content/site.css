@@ -1,0 +1,84 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    zoom: 1.2;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar-nav > li > a {
+    font-size: 15px;
+}
+
+
+
+/* Ресурсные блоки */
+.resource-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-link {
+    font-size: 18px;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.resource-image {
+    height: 40px;
+}
+
+
+
+.video-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+video {
+    max-width: 600px; /* Устанавливает максимальную ширину */
+    width: 50%; /* Устанавливает ширину как 50% от родительского контейнера */
+}
